@@ -8,5 +8,4 @@ El programa nos pide un mensaje 'm' y lo encripta con la clave pública previame
 A continuación el programa desencripta el mensaje utilizando la clave privada, es decir el trio (p, q, d).
 
 Nótese que el orden de magnitud de los números que suelen aparecer en estos computos son del orden de 2^100 incluso en los ejemplos
-mas sencillos, desgraciadamente C no tiene tipos de datos predefinidos con este rango por tanto es muy posible que a menudo encontremos 
-problemas de desbordamiento en este código.
+mas sencillos, desgraciadamente esto puede producir overflows en la mayoría de los casos que probemos.
