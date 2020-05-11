@@ -25,7 +25,7 @@ e = int(input('Introduzca un exponente de cifrado: '))
 # Comprobamos que el exponente de cifrado es válido
 while math.gcd(e, (p - 1) * (q - 1)) != 1:
     print('Exponente de cifrado no es valido')
-    e = input('Pruebe con otro exponente de cifrado: ')
+    e = int(input('Pruebe con otro exponente de cifrado: '))
 
 print('\n')
 print('La clave publica es (N = {0}, e = {1})'.format(N, e))
