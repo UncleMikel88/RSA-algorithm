@@ -31,7 +31,7 @@ print('\n')
 print('La clave publica es (N = {0}, e = {1})'.format(N, e))
 print('Puede hacer publica esta informacion para que sus amigos le envien mensajes cifrados!')
 
-# Calculamos el exponente de descifrado 
+# Calculamos el exponente de descifrado
 d = decryptionExponent(p, q, e)
 
 print('\n');
@@ -49,3 +49,14 @@ md = decryptMessage(c, d, N);
 # Mostramos resultados en pantalla
 print('Mensaje cifrado >> {0}'.format(c))
 print('Mensaje descifrado >> {0}'.format(md))
+print('\n')
+while True:
+    m = input('Introduzca el mensaje que desea cifrar (pulse "e" para terminar) >> ')
+    if m == 'e':
+        exit()
+    m = int(m)
+    c = encryptMessage(m, e, N);
+    md = decryptMessage(c, d, N);
+    print('Mensaje cifrado >> {0}'.format(c))
+    print('Mensaje descifrado >> {0}'.format(md))
+    print('\n')
